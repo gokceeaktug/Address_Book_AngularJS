@@ -1,0 +1,23 @@
+<div class="container view">
+    <header>
+        <h3>Kişiler</h3>
+    </header>
+
+    <div>
+        <a class="nav-pills hover" href="#/add-contact">Kişi Ekle</a>
+    </div>
+    <br /><br />
+
+    <div class="row">
+        <ul class="span5" >
+            <li class="nav-pills nav-stacked contact-row" data-ng-repeat="contact in contacts | orderBy:'isim'">
+                <a id="ct-details-{{contact.id}}" class="contact-data details-hidden" href="" data-ng-click="showDetails(contact.id)">
+                    <span class="span3 contact-name">{{contact.isim + ' ' + contact.soyisim}}
+                        {{contact.number}}</span>
+                    
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
